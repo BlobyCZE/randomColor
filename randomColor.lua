@@ -13,7 +13,7 @@ local function random_color()
 end
 
 local color = random_color()
-print("Náhodná barva: " .. color)
+print("Random color: " .. color)
 
 return {
     random_color = random_color

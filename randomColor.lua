@@ -1,5 +1,8 @@
-local function random(min,max)
-    return random(min, max)
+local function random(min, max)
+    if min > max then
+        min, max = max, min
+    end
+    return math.random(min, max)
 end
 
 local function random_color()
@@ -10,9 +13,8 @@ local function random_color()
 end
 
 local color = random_color()
-print("Random Color: " ..color)
+print("Náhodná barva: " .. color)
 
 return {
-  random_color = random_color
-  }
-
+    random_color = random_color
+}
